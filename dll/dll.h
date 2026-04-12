@@ -6,8 +6,8 @@
 typedef struct dnode
 {
   int value;
-  dnode *next;
-  dnode *prev;
+  struct dnode *next;
+  struct dnode *prev;
 } DNode;
 
 typedef struct 
@@ -30,6 +30,8 @@ DNode *pop_front(DList *list);
 
 DNode *insert(DList *list, size_t index, int new_value);
 
-DNode *remove(DList *list, size_t index);
+DNode *remove_node(DList *list, size_t index);
+
+DList *clear(DList *list);
 
 #endif
